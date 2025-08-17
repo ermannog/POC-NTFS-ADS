@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Controllare i valori degli attributi degli assembly
 
 <Assembly: AssemblyTitle("POC-NTFS-ADS")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Proof of Concept of NTFS Alternate Data Stream")>
+<Assembly: AssemblyCompany("DevAdmin")>
 <Assembly: AssemblyProduct("POC-NTFS-ADS")>
-<Assembly: AssemblyCopyright("Copyright ©  2025")>
+<Assembly: AssemblyCopyright("Copyright © Ermanno Goletto 2025")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
