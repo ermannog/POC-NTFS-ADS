@@ -37,12 +37,12 @@
     Public Delegate Function KeyboardDelegate(ByVal message As KeyboardLowLevelHook.KeyboardMessage,
         ByVal keyboardInputInfo As KeyboardLowLevelHook.KBDLLHOOKSTRUCT) As Boolean
 
-    Private m_KeyboardCallback As KeyboardLowLevelHook.KeyboardDelegate
+    Private KeyboardCallback As KeyboardLowLevelHook.KeyboardDelegate
 #End Region
 
     Public Sub New(ByVal keyboardCallback As KeyboardLowLevelHook.KeyboardDelegate)
         'Impostazione KeyboardCallback
-        Me.m_KeyboardCallback = keyboardCallback
+        Me.KeyboardCallback = keyboardCallback
     End Sub
 
     Public Overrides Sub SetHook()
@@ -69,7 +69,7 @@
 
         'Invoca la KeyboardCallBack
         Dim processed As Boolean
-        processed = Me.m_KeyboardCallback.Invoke(
+        processed = Me.KeyboardCallback.Invoke(
             CType(wParam.ToInt32, KeyboardLowLevelHook.KeyboardMessage),
             keyboardInputInfo)
 
